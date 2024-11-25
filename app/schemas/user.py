@@ -6,17 +6,10 @@ class UserBase(BaseModel):
     username: str
 
 
-class UserDataForm(BaseModel):
-    username: str
-    email: EmailStr
-    password: str
-    role: Optional[str] = 'user'
-
-
 class UserCreate(BaseModel):
     username: str
     email: EmailStr
-    hashed_password: str
+    password: str
     role: Optional[str] = 'user'
 
 class UserInDB(BaseModel):
